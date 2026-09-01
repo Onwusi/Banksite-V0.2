@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<script>(function(){try{var t=localStorage.getItem('nexabank-theme');document.documentElement.setAttribute('data-theme', t==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — NexaBank</title>
+<meta name="description" content="How NexaBank collects, stores, and uses account information." />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/auth.css" />
+</head>
+<body>
+
+<div class="container">
+  <nav class="nav-public">
+    <a href="index.html" class="sidebar-brand" style="padding:0;" aria-label="NexaBank home"><span class="brand-mark">N</span> NexaBank</a>
+    <div class="links">
+      <a href="index.html#features" class="nav-anchor-link">Features</a>
+      <a href="index.html#security" class="nav-anchor-link">Security</a>
+      <a href="login.html">Sign in</a>
+      <a href="register.html" class="btn btn-primary btn-sm">Open account</a>
+      <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode"></button>
+    </div>
+  </nav>
+
+  <div class="static-page">
+    <h1>Privacy Policy</h1>
+    <p class="static-lead">This page explains what account information NexaBank collects and how it's used.</p>
+
+    <h2>Information we collect</h2>
+    <p>When you register, we collect your name, email address, phone number, state, and country, along with a password and transaction PIN — both of which are stored as one-way hashes, never in plain text. Your activity within the product — deposits, withdrawals, transfers, and their statuses — is stored to display your account and transaction history back to you.</p>
+
+    <h2>How information is used</h2>
+    <p>Your information is used to operate your account: authenticating sign-in, displaying your balance and history, processing the requests you submit, and enabling account review where applicable. It is not sold, and it is not used for advertising.</p>
+
+    <h2>Local storage on your device</h2>
+    <p>A small amount of non-sensitive preference data — your light/dark theme choice and whether your balance is currently hidden — is stored in your browser's local storage so it persists between visits. Passwords and PINs are never stored this way.</p>
+
+    <h2 id="cookies">Cookie policy</h2>
+    <p>NexaBank does not use tracking or advertising cookies. Session authentication is handled through your browser's local storage rather than third-party tracking cookies.</p>
+
+    <h2>Your data</h2>
+    <p>You can view and update most of your account information directly from your Profile page at any time.</p>
+  </div>
+</div>
+
+<div id="footer-mount"></div>
+
+<div id="toast-stack"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<script>(function(){try{var t=localStorage.getItem('nexabank-theme');document.documentElement.setAttribute('data-theme', t==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact &amp; Help — NexaBank</title>
+<meta name="description" content="Get help with your NexaBank account or reach out to the support team." />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/auth.css" />
+</head>
+<body>
+
+<div class="container">
+  <nav class="nav-public">
+    <a href="index.html" class="sidebar-brand" style="padding:0;" aria-label="NexaBank home"><span class="brand-mark">N</span> NexaBank</a>
+    <div class="links">
+      <a href="index.html#features" class="nav-anchor-link">Features</a>
+      <a href="index.html#security" class="nav-anchor-link">Security</a>
+      <a href="login.html">Sign in</a>
+      <a href="register.html" class="btn btn-primary btn-sm">Open account</a>
+      <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode"></button>
+    </div>
+  </nav>
+
+  <div class="static-page">
+    <h1>Contact &amp; Help</h1>
+    <p class="static-lead">Have a question about your account, a transaction, or how NexaBank works? Here's how to get help.</p>
+
+    <h2 id="help">Help Center</h2>
+    <p>Most day-to-day questions are answered directly in the product:</p>
+    <ul>
+      <li><strong>Transfers, deposits, and withdrawals</strong> are reviewed before they're finalized — check the Transactions page for the current status of any request.</li>
+      <li><strong>Transaction PIN</strong> issues can be resolved from Profile → Security, where you can set or change your PIN.</li>
+      <li><strong>Account details</strong> like name, phone, state, and country can be updated from your Profile page.</li>
+    </ul>
+
+    <h2>Contact support</h2>
+    <p>For anything not covered above, reach out and include your account number so we can look into it faster.</p>
+    <div class="contact-grid">
+      <div class="card card-tight">
+        <div class="eyebrow">Email</div>
+        <p style="margin:8px 0 0;">support@nexabank.example</p>
+      </div>
+      <div class="card card-tight">
+        <div class="eyebrow">Response time</div>
+        <p style="margin:8px 0 0;">Within 1–2 business days</p>
+      </div>
+      <div class="card card-tight">
+        <div class="eyebrow">Hours</div>
+        <p style="margin:8px 0 0;">Monday–Friday, 9am–5pm</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="footer-mount"></div>
+
+<div id="toast-stack"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

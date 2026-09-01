@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<script>(function(){try{var t=localStorage.getItem('nexabank-theme');document.documentElement.setAttribute('data-theme', t==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terms &amp; Conditions — NexaBank</title>
+<meta name="description" content="Terms governing use of the NexaBank platform." />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/auth.css" />
+</head>
+<body>
+
+<div class="container">
+  <nav class="nav-public">
+    <a href="index.html" class="sidebar-brand" style="padding:0;" aria-label="NexaBank home"><span class="brand-mark">N</span> NexaBank</a>
+    <div class="links">
+      <a href="index.html#features" class="nav-anchor-link">Features</a>
+      <a href="index.html#security" class="nav-anchor-link">Security</a>
+      <a href="login.html">Sign in</a>
+      <a href="register.html" class="btn btn-primary btn-sm">Open account</a>
+      <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode"></button>
+    </div>
+  </nav>
+
+  <div class="static-page">
+    <h1>Terms &amp; Conditions</h1>
+    <p class="static-lead">By creating a NexaBank account, you agree to the terms below.</p>
+
+    <h2>Nature of the platform</h2>
+    <p>NexaBank is a demonstration banking platform built for portfolio and educational purposes. It is not a licensed bank or financial institution, does not hold or transmit real funds, and is not connected to any real payment network. Balances and transactions shown in the product are simulated.</p>
+
+    <h2>Account use</h2>
+    <p>You're responsible for keeping your password and transaction PIN confidential. Accounts are intended for individual, non-commercial use while evaluating the platform.</p>
+
+    <h2>Reviewed transactions</h2>
+    <p>Deposits, withdrawals, and transfers you submit are placed in a pending state and are only completed after a review step. Submitting a request does not guarantee it will be approved.</p>
+
+    <h2>Changes</h2>
+    <p>These terms may be updated as the platform evolves. Continued use of NexaBank after a change constitutes acceptance of the updated terms.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about these terms can be sent through the <a href="contact.html">contact page</a>.</p>
+  </div>
+</div>
+
+<div id="footer-mount"></div>
+
+<div id="toast-stack"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

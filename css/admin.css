@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Admin dashboard
+   ========================================================================== */
+.admin-badge{
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(233,190,115,.12); color: var(--gold);
+  padding: 4px 10px; border-radius: 999px; font-size: 11px; font-weight: 700;
+  font-family: var(--font-mono); letter-spacing: .05em; text-transform: uppercase;
+}
+
+.overview-grid{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 1100px){ .overview-grid{ grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 600px){ .overview-grid{ grid-template-columns: 1fr; } }
+.ov-card{ padding: 20px; min-width: 0; }
+.ov-card .k{ font-size: 12px; color: var(--text-faint); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; }
+.ov-card .v{ font-family: var(--font-mono); font-size: 24px; font-weight: 600; overflow-wrap: anywhere; min-width: 0; }
+.ov-card .v.accent{ color: var(--accent); }
+.ov-card .v.warn{ color: var(--warn); }
+.ov-card .v.danger{ color: var(--danger); }
+
+.transfer-card{
+  border: 1px solid var(--border-soft); border-radius: var(--radius-md);
+  padding: 18px 20px; margin-bottom: 14px; background: var(--surface);
+  max-width: 100%;
+}
+.transfer-card .tc-top{ display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+.transfer-card .tc-amt{ font-family: var(--font-mono); font-size: 20px; font-weight: 700; overflow-wrap: anywhere; }
+.transfer-card .tc-parties{ display: flex; align-items: center; gap: 14px; margin: 14px 0; flex-wrap: wrap; }
+.tc-party{ flex: 1; min-width: 130px; }
+.tc-party .p-label{ font-size: 10.5px; color: var(--text-faint); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+.tc-party .p-name{ font-weight: 600; font-size: 14px; overflow-wrap: anywhere; }
+.tc-party .p-acct{ font-family: var(--font-mono); font-size: 12.5px; color: var(--text-dim); overflow-wrap: anywhere; }
+.tc-arrow{ color: var(--text-faint); flex-shrink: 0; display: flex; align-items: center; }
+.transfer-card .tc-desc{ font-size: 13px; color: var(--text-dim); margin-bottom: 4px; overflow-wrap: anywhere; }
+.transfer-card .tc-date{ font-size: 12px; color: var(--text-faint); }
+.transfer-card .tc-actions{ display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+.transfer-card .tc-actions .btn{ flex: 1; min-width: 100px; }
+.transfer-card .tc-rejection{ margin-top: 12px; padding: 10px 12px; background: var(--danger-dim); border-radius: var(--radius-sm); font-size: 12.5px; color: var(--danger); overflow-wrap: anywhere; }
+
+@media (max-width: 420px){
+  .tc-party{ min-width: 100%; }
+  .tc-arrow{ transform: rotate(90deg); margin: -4px auto; }
+}
+
+.admin-tabs{
+  display: flex; gap: 4px; border-bottom: 1px solid var(--border-soft); margin-bottom: 24px;
+  overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+}
+.admin-tabs::-webkit-scrollbar{ display: none; }
+.admin-tabs button{
+  background: none; border: none; color: var(--text-dim); padding: 12px 18px;
+  font-weight: 600; font-size: 13.5px; cursor: pointer; border-bottom: 2px solid transparent;
+  margin-bottom: -1px; transition: color .15s, border-color .15s;
+  white-space: nowrap; flex-shrink: 0;
+}
+.admin-tabs button.active{ color: var(--accent); border-color: var(--accent); }
+.admin-tabs button:hover{ color: var(--text); }
+.admin-panel{ display: none; }
+.admin-panel.active{ display: block; }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<script>(function(){try{var t=localStorage.getItem('nexabank-theme');document.documentElement.setAttribute('data-theme', t==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Transactions — NexaBank</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+
+<div class="app-shell">
+  <div id="sidebar-mount"></div>
+
+  <div class="main-area">
+    <div id="topbar-mount"></div>
+
+    <div class="page">
+      <div class="page-head">
+        <div>
+          <h1>Transactions</h1>
+          <div class="sub">Every deposit, withdrawal, and transfer on your account.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="filter-bar">
+          <div class="field search-field" style="margin:0;">
+            <input type="text" id="tx-search" placeholder="Search by description…" />
+          </div>
+          <select id="tx-type-filter">
+            <option value="">All types</option>
+            <option value="deposit">Deposit</option>
+            <option value="withdrawal">Withdrawal</option>
+            <option value="transfer">Transfer</option>
+          </select>
+          <select id="tx-status-filter">
+            <option value="">All statuses</option>
+            <option value="completed">Completed</option>
+            <option value="pending">Pending</option>
+            <option value="failed">Failed</option>
+          </select>
+          <input type="date" id="tx-date-filter" />
+        </div>
+
+        <div id="tx-table-wrap"></div>
+
+        <div class="pagination" id="pagination" style="display:none;">
+          <button id="pg-prev"><svg aria-hidden="true" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Prev</button>
+          <span class="pg-info" id="pg-info"></span>
+          <button id="pg-next">Next <svg aria-hidden="true" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast-stack"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/transactions.js"></script>
+</body>
+</html>

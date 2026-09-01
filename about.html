@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<script>(function(){try{var t=localStorage.getItem('nexabank-theme');document.documentElement.setAttribute('data-theme', t==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — NexaBank</title>
+<meta name="description" content="Learn about NexaBank, a digital banking platform built for secure, modern account management." />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/auth.css" />
+</head>
+<body>
+
+<div class="container">
+  <nav class="nav-public">
+    <a href="index.html" class="sidebar-brand" style="padding:0;" aria-label="NexaBank home"><span class="brand-mark">N</span> NexaBank</a>
+    <div class="links">
+      <a href="index.html#features" class="nav-anchor-link">Features</a>
+      <a href="index.html#security" class="nav-anchor-link">Security</a>
+      <a href="login.html">Sign in</a>
+      <a href="register.html" class="btn btn-primary btn-sm">Open account</a>
+      <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode"></button>
+    </div>
+  </nav>
+
+  <div class="static-page">
+    <h1>About NexaBank</h1>
+    <p class="static-lead">NexaBank is a digital banking interface focused on clear account management, reviewed transactions, and secure access — built to show what a modern banking product can look and feel like.</p>
+
+    <h2>What we're building</h2>
+    <p>NexaBank gives people one place to view their balance, move money, and track activity, with every sensitive action — deposits, withdrawals, and transfers — passing through a reviewed approval step before it's final. The goal is a product that feels calm, direct, and trustworthy.</p>
+
+    <h2 id="careers">Careers</h2>
+    <p>NexaBank isn't currently hiring. If that changes, open roles will be listed here.</p>
+  </div>
+</div>
+
+<div id="footer-mount"></div>
+
+<div id="toast-stack"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

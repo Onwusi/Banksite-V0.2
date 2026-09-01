@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<script>(function(){try{var t=localStorage.getItem('nexabank-theme');document.documentElement.setAttribute('data-theme', t==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Open an account — NexaBank</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/auth.css" />
+</head>
+<body>
+
+<div class="auth-wrap">
+  <div class="auth-box" style="max-width:520px;">
+    <div class="brand-row">
+      <a href="index.html" class="sidebar-brand" style="padding:0;" aria-label="NexaBank home">
+        <span class="brand-mark">N</span>
+        <strong style="font-family:var(--font-display);font-size:18px;">NexaBank</strong>
+      </a>
+      <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" style="margin-left:auto;"></button>
+    </div>
+    <div class="card auth-card">
+      <h2>Open your account</h2>
+      <p class="sub">Takes about two minutes. All fields are required.</p>
+
+      <form id="register-form" novalidate>
+        <div class="input-row">
+          <div class="field" data-field="first_name">
+            <label for="first_name">First name</label>
+            <input type="text" id="first_name" name="first_name" autocomplete="given-name" />
+            <div class="err-msg"></div>
+          </div>
+          <div class="field" data-field="last_name">
+            <label for="last_name">Last name</label>
+            <input type="text" id="last_name" name="last_name" autocomplete="family-name" />
+            <div class="err-msg"></div>
+          </div>
+        </div>
+
+        <div class="field" data-field="email">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" autocomplete="email" />
+          <div class="err-msg"></div>
+        </div>
+
+        <div class="field" data-field="phone">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" placeholder="010XXXXXXXX" autocomplete="tel" />
+          <div class="err-msg"></div>
+        </div>
+
+        <div class="input-row">
+          <div class="field" data-field="state">
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" placeholder="e.g. Ohio" />
+            <div class="err-msg"></div>
+          </div>
+          <div class="field" data-field="country">
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" placeholder="e.g. USA" />
+            <div class="err-msg"></div>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="field" data-field="password">
+            <label for="password">Password</label>
+            <div class="pw-field">
+              <input type="password" id="password" name="password" autocomplete="new-password" />
+              <button type="button" class="eye-btn" data-toggle-for="password" aria-label="Show password"></button>
+            </div>
+            <div class="err-msg"></div>
+          </div>
+          <div class="field" data-field="confirm_password">
+            <label for="confirm_password">Confirm password</label>
+            <div class="pw-field">
+              <input type="password" id="confirm_password" name="confirm_password" autocomplete="new-password" />
+              <button type="button" class="eye-btn" data-toggle-for="confirm_password" aria-label="Show password"></button>
+            </div>
+            <div class="err-msg"></div>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="field" data-field="pin">
+            <label for="pin">Transaction PIN (4 digits)</label>
+            <div class="pw-field">
+              <input type="password" id="pin" name="pin" inputmode="numeric" maxlength="4" placeholder="••••" />
+              <button type="button" class="eye-btn" data-toggle-for="pin" aria-label="Show PIN"></button>
+            </div>
+            <div class="hint">Used to authorize withdrawals and transfers.</div>
+            <div class="err-msg"></div>
+          </div>
+          <div class="field" data-field="confirm_pin">
+            <label for="confirm_pin">Confirm PIN</label>
+            <div class="pw-field">
+              <input type="password" id="confirm_pin" name="confirm_pin" inputmode="numeric" maxlength="4" placeholder="••••" />
+              <button type="button" class="eye-btn" data-toggle-for="confirm_pin" aria-label="Show PIN"></button>
+            </div>
+            <div class="err-msg"></div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="register-submit">Create account</button>
+      </form>
+    </div>
+    <div class="auth-foot">
+      Already have an account? <a href="login.html">Sign in</a>
+    </div>
+  </div>
+</div>
+
+<div id="footer-mount"></div>
+
+<div id="toast-stack"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>

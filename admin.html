@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<script>(function(){try{var t=localStorage.getItem('nexabank-theme');document.documentElement.setAttribute('data-theme', t==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin — NexaBank</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/dashboard.css" />
+<link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+
+<div class="app-shell">
+  <div id="sidebar-mount"></div>
+
+  <div class="main-area">
+    <div id="topbar-mount"></div>
+
+    <div class="page">
+      <div class="page-head">
+        <div>
+          <h1>Admin dashboard <span class="admin-badge" style="margin-left:8px;">Admin</span></h1>
+          <div class="sub">Access is verified against your database role — not your email.</div>
+        </div>
+      </div>
+
+      <div class="admin-tabs">
+        <button class="active" data-panel="panel-overview">Overview</button>
+        <button data-panel="panel-deposits">Pending deposits</button>
+        <button data-panel="panel-withdrawals">Pending withdrawals</button>
+        <button data-panel="panel-transfers">Pending transfers</button>
+        <button data-panel="panel-customers">Customer management</button>
+        <button data-panel="panel-transactions">Transaction monitoring</button>
+      </div>
+
+      <div class="admin-panel active" id="panel-overview">
+        <div class="overview-grid">
+          <div class="card ov-card"><div class="k">Total users</div><div class="v" id="ov-users">0</div></div>
+          <div class="card ov-card"><div class="k">Total accounts</div><div class="v" id="ov-accounts">0</div></div>
+          <div class="card ov-card">
+            <div class="k">Total balance</div>
+            <div class="flex items-center">
+              <div class="v accent mono" id="ov-balance">$0.00</div>
+              <button type="button" class="eye-btn" id="ov-balance-eye" aria-label="Hide total balance"></button>
+            </div>
+          </div>
+          <div class="card ov-card">
+            <div class="k">Pending items</div>
+            <div class="v warn" id="ov-pending">0</div>
+            <div class="text-faint" id="ov-pending-breakdown" style="font-size:11.5px;margin-top:4px;"></div>
+          </div>
+          <div class="card ov-card"><div class="k">Approved transfers</div><div class="v accent" id="ov-approved">0</div></div>
+          <div class="card ov-card"><div class="k">Rejected transfers</div><div class="v danger" id="ov-rejected">0</div></div>
+        </div>
+      </div>
+
+      <div class="admin-panel" id="panel-deposits">
+        <div id="pending-deposits-list"></div>
+      </div>
+
+      <div class="admin-panel" id="panel-withdrawals">
+        <div id="pending-withdrawals-list"></div>
+      </div>
+
+      <div class="admin-panel" id="panel-transfers">
+        <div id="pending-transfers-list"></div>
+      </div>
+
+      <div class="admin-panel" id="panel-customers">
+        <div class="card">
+          <div id="customers-wrap"></div>
+        </div>
+      </div>
+
+      <div class="admin-panel" id="panel-transactions">
+        <div class="card">
+          <div class="filter-bar">
+            <select id="admin-tx-type">
+              <option value="">All types</option>
+              <option value="deposit">Deposit</option>
+              <option value="withdrawal">Withdrawal</option>
+              <option value="transfer">Transfer</option>
+            </select>
+            <select id="admin-tx-status">
+              <option value="">All statuses</option>
+              <option value="completed">Completed</option>
+              <option value="pending">Pending</option>
+              <option value="failed">Failed</option>
+            </select>
+          </div>
+          <div id="admin-tx-wrap"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast-stack"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

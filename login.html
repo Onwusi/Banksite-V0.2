@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<script>(function(){try{var t=localStorage.getItem('nexabank-theme');document.documentElement.setAttribute('data-theme', t==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sign in — NexaBank</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/auth.css" />
+</head>
+<body>
+
+<div class="auth-wrap">
+  <div class="auth-box">
+    <div class="brand-row">
+      <a href="index.html" class="sidebar-brand" style="padding:0;" aria-label="NexaBank home">
+        <span class="brand-mark">N</span>
+        <strong style="font-family:var(--font-display);font-size:18px;">NexaBank</strong>
+      </a>
+      <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode" style="margin-left:auto;"></button>
+    </div>
+    <div class="card auth-card">
+      <h2>Welcome back</h2>
+      <p class="sub">Sign in to access your account.</p>
+
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="pw-field">
+            <input type="password" id="password" name="password" placeholder="••••••••" required autocomplete="current-password" />
+            <button type="button" class="eye-btn" data-toggle-for="password" aria-label="Show password"></button>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" id="login-submit">Sign in</button>
+      </form>
+    </div>
+    <div class="auth-foot">
+      Don't have an account? <a href="register.html">Open one now</a>
+    </div>
+  </div>
+</div>
+
+<div id="footer-mount"></div>
+
+<div id="toast-stack"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

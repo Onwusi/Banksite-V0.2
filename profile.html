@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<script>(function(){try{var t=localStorage.getItem('nexabank-theme');document.documentElement.setAttribute('data-theme', t==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Profile — NexaBank</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+
+<div class="app-shell">
+  <div id="sidebar-mount"></div>
+
+  <div class="main-area">
+    <div id="topbar-mount"></div>
+
+    <div class="page">
+      <div class="page-head">
+        <div>
+          <h1>Profile</h1>
+          <div class="sub">Your personal and account details.</div>
+        </div>
+        <button class="btn btn-ghost" id="toggle-edit">Edit profile</button>
+      </div>
+
+      <div class="card">
+        <div class="profile-grid" id="profile-view">
+          <div class="profile-field"><div class="k">First name</div><div class="v" id="view-first">—</div></div>
+          <div class="profile-field"><div class="k">Last name</div><div class="v" id="view-last">—</div></div>
+          <div class="profile-field"><div class="k">Email</div><div class="v" id="view-email">—</div></div>
+          <div class="profile-field"><div class="k">Phone</div><div class="v" id="view-phone">—</div></div>
+          <div class="profile-field"><div class="k">State</div><div class="v" id="view-state">—</div></div>
+          <div class="profile-field"><div class="k">Country</div><div class="v" id="view-country">—</div></div>
+          <div class="profile-field"><div class="k">Account number</div><div class="v mono" id="view-account">—</div></div>
+          <div class="profile-field"><div class="k">Account status</div><div class="v"><span class="badge" id="view-status">active</span></div></div>
+          <div class="profile-field"><div class="k">Member since</div><div class="v" id="view-since">—</div></div>
+        </div>
+
+        <div id="profile-edit" style="display:none;">
+          <form id="edit-form">
+            <div class="input-row">
+              <div class="field"><label>First name</label><input type="text" name="first_name" /></div>
+              <div class="field"><label>Last name</label><input type="text" name="last_name" /></div>
+            </div>
+            <div class="field"><label>Phone</label><input type="text" name="phone" /></div>
+            <div class="input-row">
+              <div class="field"><label>State</label><input type="text" name="state" /></div>
+              <div class="field"><label>Country</label><input type="text" name="country" /></div>
+            </div>
+            <div class="flex gap-12">
+              <button type="button" class="btn btn-ghost" id="cancel-edit">Cancel</button>
+              <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="card mt-24" id="settings-card">
+        <h3 id="pin-section-title">Security</h3>
+        <p class="text-dim" id="pin-section-sub" style="margin-bottom:6px;">Update the 4-digit PIN used to authorize withdrawals and transfers.</p>
+
+        <div id="pin-section" style="max-width:420px;">
+          <div class="skeleton skel-line" style="width:60%;"></div>
+          <div class="skeleton skel-line" style="width:90%;"></div>
+          <div class="skeleton skel-line" style="width:40%;"></div>
+        </div>
+
+        <div class="settings-row" style="margin-top:22px;">
+          <div>
+            <div class="r-title">Email notifications</div>
+            <div class="r-sub">Get notified about deposits, withdrawals, and transfer approvals.</div>
+          </div>
+          <label class="toggle-switch"><input type="checkbox" checked disabled /><span class="slider"></span></label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast-stack"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>

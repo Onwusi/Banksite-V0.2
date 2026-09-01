@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<script>(function(){try{var t=localStorage.getItem('nexabank-theme');document.documentElement.setAttribute('data-theme', t==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Page not found — NexaBank</title>
+<meta name="description" content="The page you're looking for doesn't exist or may have been moved." />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/auth.css" />
+</head>
+<body>
+
+<div class="container">
+  <nav class="nav-public">
+    <a href="index.html" class="sidebar-brand" style="padding:0;" aria-label="NexaBank home"><span class="brand-mark">N</span> NexaBank</a>
+    <div class="links">
+      <a href="login.html">Sign in</a>
+      <a href="register.html" class="btn btn-primary btn-sm">Open account</a>
+      <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Toggle dark mode"></button>
+    </div>
+  </nav>
+
+  <div class="error-page">
+    <div>
+      <div class="error-code">404</div>
+      <h1>Page not found</h1>
+      <p>The page you're looking for doesn't exist or may have been moved.</p>
+      <a href="index.html" class="btn btn-primary">Return to Home</a>
+    </div>
+  </div>
+</div>
+
+<div id="footer-mount"></div>
+
+<div id="toast-stack"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>
